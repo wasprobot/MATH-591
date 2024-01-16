@@ -1,0 +1,96 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+\title{1.6.1 - Structures}
+\date{\today}
+
+\maketitle
+
+\section*{1}
+Consider the structure constructed in Example 1.6.2. 
+Find the value of each of the following: 
+\begin{itemize}
+    \item $0+0=
+        +(\text{Bottom},\text{Bottom})=
+        \text{Oberon}$
+
+    \item $0E0=
+        E(\text{Bottom},\text{Bottom})=
+        \text{Puck}$
+
+    \item $S0\cdot SS0=
+        \cdot(S(\text{Bottom}), S(S(\text{Bottom})))=
+        \cdot(\text{Titania}, \text{Bottom})=
+        \text{Titania}
+        $
+\end{itemize}
+
+Do you think $0<0$ in this structure?
+$$
+    0<0=
+    <(\text{Bottom},\text{Bottom})=\text{No}
+$$
+
+% \section*{2}
+% Suppose that $\mathcal{L}$ is the language ${0,+,<}$. 
+% Let's work together to describe an $\mathcal{L}$-structure 
+% $\mathfrak{A}$. Let the universe $A$ be the set consisting 
+% of all of the natural numbers together with Ingrid Bergman and Humphrey Bogart.
+% You decide on the interpretations of the symbols. 
+
+% \begin{itemize}
+%     \item What is the value of 5 + Ingrid?
+%     \item Is Bogie < 0? 
+% \end{itemize}
+
+\section*{3} 
+Here is a language consisting of one constant symbol, 
+one 3-ary function symbol, and one binary relation symbol: 
+$\mathcal{L}$ is $\{\flat,\sharp,\natural\}$. 
+
+\begin{itemize}
+    \item Describe an $\mathcal{L}$-model that has as its universe $\mathbb{R}$, 
+    the set of real numbers.
+    $$
+        \mathfrak{A} = (\mathbb{R}, \flat^\mathfrak{A}, \sharp^\mathfrak{A}, \natural^\mathfrak{A})
+    $$
+
+    \item Describe another $\mathcal{L}$-model that has a finite universe.
+    $$
+        \mathfrak{A} = (\{1,2,3\}, \flat^\mathfrak{A}, \sharp^\mathfrak{A}, \natural^\mathfrak{A})
+    $$
+
+\end{itemize}
+
+\section*{4}
+A short paragraph explaining the difference between a language
+and a structure for a language.
+
+A language is a set of symbols, and a structure is an interpretation of those symbols.
+A structure is a set of objects, which have meaning. For example,
+the language $\mathcal{L} = \{0,+,\cdot,S\}$ has the structure $\mathfrak{A} = (\mathbb{N}, 0^\mathfrak{A}, +^\mathfrak{A}, \cdot^\mathfrak{A}, S^\mathfrak{A})$,
+where $0^\mathfrak{A}$ is the number zero, $+^\mathfrak{A}$ is the addition function, and $\cdot^\mathfrak{A}$ is the multiplication function
+and $S^\mathfrak{A}$ is the unary successor function.
+Without a structure, the symbols in a language have no meaning.
+
+\section*{6}
+Let $\mathcal{L}$ be $\{0, f, g, R\}$, where $0$ is a constant symbol, 
+$f$ is a unary function symbol, $g$ is a binary function symbol, 
+and $R$ is a $3$-ary relation symbol.\\
+
+Using $\mathcal{C}$, the set of all $\mathcal{L}$-terms, 
+we define a set 
+$$
+    \mathcal{C'} = (\forall t \in \mathcal{C})(\lnot{t})
+$$
+
+The desired $\mathcal{L}$-structure can be defined as:
+$$
+    \mathfrak{C} = \{ \mathcal{C'}, 0^\mathfrak{C}, f^\mathfrak{C}, g^\mathfrak{C}, R^\mathfrak{C} \}
+$$.
+
+\end{document}

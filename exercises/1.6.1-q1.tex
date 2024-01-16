@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\newcounter{question}
+\setcounter{question}{0}
+\begin{document}
+
+\newcommand\Que[1]{%
+   \leavevmode\par
+   \stepcounter{question}
+   \noindent
+   \thequestion. Q --- #1\par}
+
+\newcommand\Ans[2][]{%
+    \leavevmode\par\noindent
+   {\leftskip37pt
+    A --- \textbf{#1}#2\par}}
+
+\Que{
+    Find the general solution of the recurrence equation\\
+    $g_{n+2} = 3g_{n+1}-2g_n$.
+}
+\Ans{
+    The recurrence can be written as a homogenous
+    equation, \\
+    $g_{n+2} - 3g_{n+1} + 2g_n=0$. On summating:
+    \begin{equation}
+        \sum_{n=0}^\infty {g_{n+2}} 
+        - 3\sum_{n=0}^\infty {g_{n+1}} 
+        + 2\sum_{n=0}^\infty {g_n}=0
+    \end{equation}
+
+    \begin{align*}
+        \sum_{n=0}^\infty {g_{n+1}x^n} & = 
+        g_1+g_2x+g_3x^2+g_4x^3+\cdots\\
+        x\sum_{n=0}^\infty {g_{n+1}x^n} & = 
+        g_1x+g_2x^2+g_3x^3+g_4x^4+\cdots\\
+        & = f(x) - g_0\\
+        \therefore
+        \sum_{n=0}^\infty {g_{n+1}x^n} & = 
+        \frac{f(x) - g_0}{x}
+    \end{align*}
+
+    \boxed{
+        r_n = \frac{g_0-g_1}{2} (-1)^n
+        + \frac{g_0+g_1}{2}
+    }
+}
+
+\Que{
+    Find the general solution of the recurrence equation\\
+    $g_{n+2} = 3g_{n+1}-2g_n$.
+}
+\Ans{
+    The recurrence can be written as a homogenous
+    equation, \\
+}
+\end{document}
